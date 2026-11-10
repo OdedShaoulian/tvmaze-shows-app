@@ -13,21 +13,20 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 10px 18px;
-  border-radius: 10px;
-  border: 1px solid var(--border);
-  background: var(--card-bg);
+  padding: 9px 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.06);
   color: var(--text-h);
   text-decoration: none;
   font-size: 14px;
   font-weight: 600;
-  transition: all 0.2s ease;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
 .back-catalog-btn:hover {
-  border-color: var(--accent);
-  background: var(--accent-bg);
-  color: #fff;
+  border-color: rgba(255, 255, 255, 0.24);
+  background: rgba(255, 255, 255, 0.12);
 }
 
 .detail-error-actions {
@@ -40,23 +39,22 @@
 
 .show-detail-card {
   display: grid;
-  grid-template-columns: 310px 1fr;
+  grid-template-columns: 300px 1fr;
   gap: 36px;
   padding: 32px;
-  border-radius: 20px;
+  border-radius: 18px;
   border: 1px solid var(--border);
-  background: linear-gradient(160deg, #172033 0%, #111726 100%);
-  box-shadow: var(--shadow);
+  background: var(--card-bg);
 }
 
 .show-detail-poster {
   border-radius: 14px;
   overflow: hidden;
-  background: var(--bg-elevated);
+  background: #121214;
   aspect-ratio: 2 / 3;
   width: 100%;
   border: 1px solid var(--border);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.55);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.5);
 }
 
 .show-detail-poster img {
@@ -74,7 +72,7 @@
   justify-content: center;
   color: var(--text-muted);
   font-size: 15px;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .show-detail-content {
@@ -93,21 +91,24 @@
 
 .show-detail-title {
   margin: 0;
-  font-size: 38px;
-  line-height: 1.15;
+  font-size: 36px;
+  line-height: 1.25;
+  padding-bottom: 4px;
   color: var(--text-h);
+  overflow: visible;
 }
 
 .show-detail-rating {
-  background: rgba(9, 13, 22, 0.9);
-  border: 1px solid rgba(245, 158, 11, 0.45);
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   color: var(--gold);
-  font-size: 17px;
-  font-weight: 800;
-  padding: 8px 16px;
-  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 999px;
   white-space: nowrap;
-  box-shadow: 0 0 16px rgba(245, 158, 11, 0.22);
 }
 
 .show-detail-genres {
@@ -117,13 +118,12 @@
 }
 
 .detail-genre-badge {
-  font-size: 13px;
+  font-size: 0.75rem;
   font-weight: 600;
-  padding: 5px 14px;
+  padding: 4px 12px;
   border-radius: 999px;
-  background: var(--accent-bg);
-  border: 1px solid rgba(99, 102, 241, 0.35);
-  color: #c7d2fe;
+  background: rgba(255, 255, 255, 0.08);
+  color: #e5e5ea;
 }
 
 .show-detail-meta {
@@ -133,7 +133,7 @@
   margin: 0;
   padding: 18px 20px;
   border-radius: 14px;
-  background: var(--bg-elevated);
+  background: rgba(255, 255, 255, 0.03);
   border: 1px solid var(--border);
 }
 
@@ -146,26 +146,28 @@
 .meta-item dt {
   font-size: 11px;
   text-transform: uppercase;
-  letter-spacing: 0.7px;
+  letter-spacing: 0.05em;
   color: var(--text-muted);
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .meta-item dd {
   margin: 0;
   font-size: 15px;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--text-h);
 }
 
 .show-detail-summary h2 {
   font-size: 19px;
+  line-height: 1.3;
+  padding-bottom: 2px;
   margin-bottom: 10px;
   color: var(--text-h);
 }
 
 .show-detail-summary p {
-  line-height: 1.7;
+  line-height: 1.65;
   color: var(--text);
 }
 
@@ -178,20 +180,19 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 12px 24px;
-  border-radius: 10px;
-  background: var(--accent-gradient);
-  color: #fff;
+  padding: 11px 22px;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #000000;
   text-decoration: none;
   font-size: 15px;
-  font-weight: 700;
-  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  font-weight: 600;
+  transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
 .tvmaze-external-link:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(139, 92, 246, 0.55);
+  opacity: 0.9;
+  transform: translateY(-1px);
 }
 
 @media (max-width: 768px) {

@@ -8,7 +8,6 @@
   border-radius: 16px;
   border: 1px solid var(--border);
   background: var(--card-bg);
-  box-shadow: var(--shadow);
 }
 
 .filter-group {
@@ -24,19 +23,18 @@
 
 .filter-label {
   font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 0.6px;
-  font-weight: 700;
-  color: var(--text);
+  letter-spacing: 0.02em;
+  font-weight: 600;
+  color: var(--text-muted);
 }
 
 .filter-input,
 .filter-select {
-  height: 44px;
-  padding: 0 14px;
-  border-radius: 10px;
-  border: 1px solid var(--border);
-  background: var(--bg-elevated);
+  height: 42px;
+  padding: 0 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.06);
   color: var(--text-h);
   font-size: 15px;
   font-family: inherit;
@@ -45,9 +43,12 @@
 }
 
 .filter-select {
-  border-radius: 999px;
-  padding: 0 18px;
   cursor: pointer;
+}
+
+.filter-select option {
+  background-color: #121214;
+  color: #ffffff;
 }
 
 .filter-input::placeholder {
@@ -56,14 +57,15 @@
 
 .filter-input:hover,
 .filter-select:hover {
-  border-color: rgba(99, 102, 241, 0.45);
+  border-color: rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .filter-input:focus,
 .filter-select:focus {
   outline: none;
-  border-color: var(--accent);
-  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.3);
+  border-color: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.25);
 }
 
 .filter-actions {
@@ -72,28 +74,26 @@
 }
 
 .reset-filters-button {
-  height: 44px;
+  height: 42px;
   padding: 0 20px;
   border-radius: 999px;
-  border: 1px solid var(--border);
-  background: var(--bg-elevated);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.06);
   color: var(--text-h);
   font-size: 14px;
   font-weight: 600;
   font-family: inherit;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: background-color 0.2s ease, border-color 0.2s ease, opacity 0.2s ease;
 }
 
 .reset-filters-button:hover:not(:disabled) {
-  border-color: var(--accent);
-  background: var(--accent-bg);
-  color: #fff;
-  box-shadow: 0 0 12px rgba(99, 102, 241, 0.25);
+  border-color: rgba(255, 255, 255, 0.28);
+  background: rgba(255, 255, 255, 0.14);
 }
 
 .reset-filters-button:disabled {
-  opacity: 0.4;
+  opacity: 0.35;
   cursor: not-allowed;
 }
 
@@ -101,7 +101,7 @@
   margin-top: 18px;
   font-size: 14px;
   color: var(--text-muted);
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .empty-results {

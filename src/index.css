@@ -1,37 +1,34 @@
 :root {
-  --bg: #090d16;
-  --bg-elevated: #0d111d;
-  --card-bg: #151c2c;
-  --code-bg: #111726;
-  --border: #222d42;
-  --text-h: #f8fafc;
-  --text: #94a3b8;
-  --text-muted: #64748b;
-  --accent: #6366f1;
-  --accent-secondary: #8b5cf6;
-  --accent-gradient: linear-gradient(135deg, #6366f1, #8b5cf6);
-  --accent-bg: rgba(99, 102, 241, 0.16);
-  --accent-border: rgba(99, 102, 241, 0.55);
-  --social-bg: rgba(34, 45, 66, 0.55);
-  --gold: #f59e0b;
-  --emerald: #10b981;
-  --shadow:
-    0 14px 28px -6px rgba(0, 0, 0, 0.65),
-    0 4px 12px -2px rgba(0, 0, 0, 0.45);
-  --glow-shadow:
-    0 16px 32px -6px rgba(0, 0, 0, 0.75),
-    0 0 22px rgba(99, 102, 241, 0.22);
+  --bg: #000000;
+  --bg-elevated: #121214;
+  --card-bg: rgba(255, 255, 255, 0.04);
+  --card-bg-solid: #121214;
+  --code-bg: rgba(255, 255, 255, 0.06);
+  --border: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.14);
+  --text-h: #ffffff;
+  --text: #a1a1a6;
+  --text-muted: #86868b;
+  --accent: #0a84ff;
+  --accent-bg: rgba(255, 255, 255, 0.1);
+  --accent-border: rgba(255, 255, 255, 0.22);
+  --social-bg: rgba(255, 255, 255, 0.08);
+  --gold: #ffd60a;
+  --emerald: #30d158;
+  --shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
+  --hover-shadow: 0 16px 32px rgba(0, 0, 0, 0.5);
 
-  --sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-  --heading: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-  --mono: ui-monospace, Consolas, monospace;
+  --sans: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text',
+    'Segoe UI', Roboto, sans-serif;
+  --heading: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text',
+    'Segoe UI', Roboto, sans-serif;
+  --mono: ui-monospace, 'SF Mono', Consolas, monospace;
 
-  font: 17px/150% var(--sans);
-  letter-spacing: 0.15px;
+  font: 17px/1.5 var(--sans);
+  letter-spacing: -0.01em;
   color-scheme: dark;
   color: var(--text);
-  background: radial-gradient(circle at 50% 0%, #131b2e 0%, #090d16 65%);
-  background-attachment: fixed;
+  background-color: var(--bg);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -65,26 +62,31 @@ h3 {
   font-family: var(--heading);
   font-weight: 700;
   color: var(--text-h);
+  overflow: visible;
 }
 
 h1 {
-  font-size: 44px;
-  letter-spacing: -1.2px;
+  font-size: 40px;
+  line-height: 1.25;
+  padding-bottom: 4px;
+  letter-spacing: -0.025em;
   margin: 16px 0 8px;
-  background: linear-gradient(180deg, #ffffff 0%, #cbd5e1 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #ffffff;
+  overflow: visible;
   @media (max-width: 1024px) {
-    font-size: 32px;
+    font-size: 30px;
     margin: 12px 0 6px;
   }
 }
 
 h2 {
   font-size: 22px;
-  line-height: 125%;
-  letter-spacing: -0.3px;
+  line-height: 1.3;
+  padding-bottom: 2px;
+  letter-spacing: -0.015em;
   margin: 0 0 8px;
+  color: #ffffff;
+  overflow: visible;
   @media (max-width: 1024px) {
     font-size: 19px;
   }
@@ -100,7 +102,7 @@ code {
   border-radius: 6px;
   color: var(--text-h);
   font-size: 14px;
-  line-height: 135%;
+  line-height: 1.35;
   padding: 4px 8px;
   background: var(--code-bg);
   border: 1px solid var(--border);

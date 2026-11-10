@@ -13,7 +13,6 @@
   border-radius: 16px;
   border: 1px solid var(--border);
   background: var(--card-bg);
-  box-shadow: var(--shadow);
 }
 
 .selector-card {
@@ -24,50 +23,55 @@
 
 .selector-label {
   font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 0.6px;
-  font-weight: 700;
-  color: var(--text);
+  letter-spacing: 0.02em;
+  font-weight: 600;
+  color: var(--text-muted);
 }
 
 .compare-select {
-  height: 46px;
+  height: 44px;
   padding: 0 16px;
-  border-radius: 10px;
-  border: 1px solid var(--border);
-  background: var(--bg-elevated);
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.06);
   color: var(--text-h);
   font-size: 15px;
   font-family: inherit;
   width: 100%;
   box-sizing: border-box;
   cursor: pointer;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.compare-select option {
+  background-color: #121214;
+  color: #ffffff;
 }
 
 .compare-select:hover {
-  border-color: rgba(99, 102, 241, 0.45);
+  border-color: rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .compare-select:focus {
   outline: none;
-  border-color: var(--accent);
-  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.3);
+  border-color: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.25);
 }
 
 .compare-vs-badge {
-  width: 44px;
-  height: 44px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  background: var(--accent-gradient);
-  color: #fff;
-  font-weight: 800;
-  font-size: 14px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border);
+  color: var(--text-h);
+  font-weight: 700;
+  font-size: 13px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 20px;
-  box-shadow: 0 0 16px rgba(99, 102, 241, 0.45);
 }
 
 .compare-prompt {
@@ -82,11 +86,10 @@
 }
 
 .shared-genres-banner {
-  padding: 22px 24px;
+  padding: 20px 24px;
   border-radius: 16px;
   border: 1px solid var(--border);
   background: var(--card-bg);
-  box-shadow: var(--shadow);
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -94,6 +97,8 @@
 
 .shared-genres-banner h2 {
   font-size: 18px;
+  line-height: 1.3;
+  padding-bottom: 2px;
   margin: 0;
 }
 
@@ -113,7 +118,6 @@
   border-radius: 16px;
   border: 1px solid var(--border);
   background: var(--card-bg);
-  box-shadow: var(--shadow);
 }
 
 .comparison-table {
@@ -130,20 +134,20 @@
 }
 
 .comparison-table thead th {
-  background: var(--bg-elevated);
+  background: rgba(255, 255, 255, 0.03);
   color: var(--text-h);
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .comparison-table tbody th {
   width: 150px;
   color: var(--text-muted);
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.04em;
   font-size: 12px;
-  font-weight: 700;
-  background: var(--bg-elevated);
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.02);
 }
 
 .comparison-table tbody tr:last-child th,
@@ -162,16 +166,15 @@
   width: 120px;
   aspect-ratio: 2 / 3;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 12px;
   border: 1px solid var(--border);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.45);
 }
 
 .compare-poster-placeholder {
   width: 120px;
   aspect-ratio: 2 / 3;
-  border-radius: 10px;
-  background: var(--bg-elevated);
+  border-radius: 12px;
+  background: #121214;
   border: 1px solid var(--border);
   display: flex;
   align-items: center;
@@ -182,56 +185,55 @@
 
 .compare-detail-link {
   font-size: 13px;
-  font-weight: 600;
-  color: #818cf8;
+  font-weight: 500;
+  color: var(--text-h);
   text-decoration: none;
+  opacity: 0.85;
 }
 
 .compare-detail-link:hover {
   text-decoration: underline;
-  color: #a5b4fc;
+  opacity: 1;
 }
 
 .winner-cell {
-  background: rgba(99, 102, 241, 0.12);
+  background: rgba(255, 255, 255, 0.04);
 }
 
 .compare-metric-value {
-  font-weight: 700;
+  font-weight: 600;
   color: var(--text-h);
   margin-right: 10px;
 }
 
 .winner-badge {
   display: inline-block;
-  font-size: 12px;
-  font-weight: 700;
-  padding: 3px 10px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 2px 10px;
   border-radius: 999px;
-  background: rgba(16, 185, 129, 0.18);
-  border: 1px solid rgba(16, 185, 129, 0.4);
-  color: var(--emerald);
+  background: rgba(48, 209, 88, 0.14);
+  color: #30d158;
 }
 
 .longer-badge {
   display: inline-block;
-  font-size: 12px;
-  font-weight: 700;
-  padding: 3px 10px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 2px 10px;
   border-radius: 999px;
-  background: var(--accent-bg);
-  border: 1px solid rgba(99, 102, 241, 0.4);
-  color: #c7d2fe;
+  background: rgba(255, 255, 255, 0.1);
+  color: #e5e5ea;
 }
 
 .tie-badge {
   display: inline-block;
-  font-size: 12px;
-  font-weight: 600;
-  padding: 3px 10px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 2px 10px;
   border-radius: 999px;
-  background: var(--social-bg);
-  color: var(--text);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text-muted);
 }
 
 .compare-genres-cell {
