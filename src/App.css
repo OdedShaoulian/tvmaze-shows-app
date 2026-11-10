@@ -85,6 +85,66 @@
   font-weight: 500;
 }
 
+.status-banner {
+  margin-top: 32px;
+  padding: 24px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--code-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  text-align: center;
+}
+
+.loading-banner {
+  color: var(--text-h);
+  font-weight: 500;
+}
+
+.loading-spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid var(--border);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.error-banner {
+  border-color: rgba(239, 68, 68, 0.4);
+  background: rgba(239, 68, 68, 0.08);
+  color: #ef4444;
+}
+
+.error-message {
+  font-weight: 500;
+}
+
+.retry-button {
+  padding: 8px 18px;
+  border-radius: 6px;
+  border: none;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: opacity 0.2s;
+}
+
+.retry-button:hover {
+  opacity: 0.9;
+}
+
 @media (max-width: 600px) {
   .navbar-container {
     padding: 12px 16px;

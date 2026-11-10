@@ -12,7 +12,7 @@
   - Create `src/data/mockShows.json` with 4 sample shows. Build `ShowsPage` and `ShowCard` rendering the list with unique `key` props.
   - *Done when:* Mock shows display correctly on the home view as responsive cards.
 
-- [ ] **Task 4: API Integration with Loading & Error States**
+- [x] **Task 4: API Integration with Loading & Error States**
   - Replace mock data fetching in `ShowsPage` with an actual `fetch` to `https://api.tvmaze.com/shows` inside `useEffect`. Handle loading spinner and error alert.
   - *Done when:* Shows load live from TVMaze API, showing a loading indicator during fetch and an error banner on network failure.
 
