@@ -189,3 +189,19 @@
 > 3. Add responsive styling in src/pages/StatsPage.css or modular CSS.
 > 4. Strict TypeScript typing (zero 'any'). Ensure `npm run build` succeeds cleanly.
 > 5. Update tasks.md to mark Task 8 as completed ([x]).
+
+**17:28 · antigravity**
+
+> We are continuing the TVMaze Series Explorer implementation based on PRD.md and tasks.md.
+> 
+> Please execute Task 9: Unit Testing with Vitest.
+> 
+> Requirements:
+> 1. Ensure Vitest test environment is configured properly (e.g. vitest.config.ts or vite.config.ts).
+> 2. Create unit test suites inside src/utils/__tests__/:
+>    - `filters.test.ts`: Test pure filtering functions (title search case-insensitivity, genre filtering, status filtering, reset state, and empty result handling).
+>    - `stats.test.ts`: Test analytics utilities (average rating calculation, handling null ratings, empty array edge case, top rated sorting, and status distribution).
+>    - `compare.test.ts`: Test comparison utilities (winner detection for higher rating, tie handling, runtime difference calculation, shared genres extraction).
+> 3. Ensure at least 6-8 independent, descriptive, and passing unit tests across these suites.
+> 4. Run tests and verify that `npm test` passes cleanly with 100% green tests.
+> 5. Update tasks.md to mark Task 9 as completed ([x]).

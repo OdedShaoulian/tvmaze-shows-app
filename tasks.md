@@ -32,7 +32,7 @@
   - Build pure aggregation functions in `src/utils/stats.ts` and build `StatsPage` to display average rating, top 5 shows, and status breakdown.
   - *Done when:* The `/stats` page accurately computes and renders summary insights from the loaded shows.
 
-- [ ] **Task 9: Unit Testing with Vitest**
+- [x] **Task 9: Unit Testing with Vitest**
   - Implement at least 5 unit tests in `src/utils/__tests__/` covering filtering, sorting, rating calculation, and data aggregation.
   - *Done when:* Running `npm test` executes and passes all unit tests cleanly.
 
