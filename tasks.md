@@ -1,6 +1,6 @@
 # Tasks & Implementation Plan
 
-- [ ] **Task 1: TypeScript Interfaces**
+- [x] **Task 1: TypeScript Interfaces**
   - Define complete TypeScript types and interfaces in `src/types/show.ts` (Show, Rating, Image, FilterState) with zero `any`.
   - *Done when:* `src/types/show.ts` exports all required interfaces and `npm run build` succeeds.
 
