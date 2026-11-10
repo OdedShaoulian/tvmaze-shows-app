@@ -20,7 +20,7 @@
   - Implement pure filtering functions in `src/utils/filters.ts` and a `FilterBar` component. Connect inputs to state in `ShowsPage`.
   - *Done when:* Typing a show name or choosing a genre filters the cards instantly.
 
-- [ ] **Task 6: Dynamic Show Detail Page**
+- [x] **Task 6: Dynamic Show Detail Page**
   - Build `ShowDetailPage` utilizing `useParams` to extract the show ID and fetching single show data from `https://api.tvmaze.com/shows/:id`.
   - *Done when:* Clicking any card routes to `/shows/:id` and renders full metadata and summary.
 

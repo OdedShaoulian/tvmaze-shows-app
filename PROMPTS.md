@@ -87,3 +87,55 @@
 >    - When loaded successfully, render the shows in the existing responsive ShowCard grid.
 > 3. Strictly maintain type safety (no 'any'). Ensure `npm run build` succeeds cleanly.
 > 4. Update tasks.md to mark Task 4 as completed ([x]).
+
+**15:46 · antigravity**
+
+> We are continuing the TVMaze Series Explorer implementation based on PRD.md and tasks.md.
+> 
+> Please execute Task 5: Search & Genre Filtering.
+> 
+> Requirements:
+> 1. Create a pure utility file in src/utils/filters.ts:
+>    - Export `filterShows(shows: Show[], filters: FilterState): Show[]`:
+>      * Filter case-insensitively by show name.
+>      * Filter by genre if selectedGenre !== 'All'.
+>      * Filter by status if selectedStatus !== 'All'.
+>    - Export `extractGenres(shows: Show[]): string[]` returning an alphabetically sorted list of unique genres present across all shows.
+>    - Export `extractStatuses(shows: Show[]): string[]` returning unique statuses.
+>    - Keep all functions pure, deterministic, and without side effects (suitable for unit testing).
+> 2. Create a FilterBar component in src/components/FilterBar.tsx:
+>    - Text input for title search with clear label and placeholder.
+>    - Select dropdown for genres (with "All Genres" default).
+>    - Select dropdown for statuses (with "All Statuses" default).
+>    - "Reset Filters" button to restore default state.
+>    - Responsive styling in FilterBar.css or modular CSS.
+> 3. Integrate into src/pages/ShowsPage.tsx:
+>    - Hold filter state using `useState<FilterState>({ searchQuery: '', selectedGenre: 'All', selectedStatus: 'All' })`.
+>    - Apply `filterShows` using `useMemo` for optimal performance.
+>    - Display a friendly "No shows found matching your criteria" message with a reset button when filtered results are empty.
+>    - Display the count of currently matched shows (e.g. "Showing X of Y shows").
+> 4. Strict TypeScript typing (zero 'any'). Ensure `npm run build` succeeds.
+> 5. Update tasks.md to mark Task 5 as completed ([x]).
+
+**16:15 · antigravity**
+
+> We are continuing the TVMaze Series Explorer implementation based on PRD.md and tasks.md.
+> 
+> Please execute Task 6: Dynamic Show Detail Page.
+> 
+> Requirements:
+> 1. Update src/services/tvmazeApi.ts:
+>    - Export `fetchShowById(id: string | number): Promise<Show>` that queries `https://api.tvmaze.com/shows/${id}` with proper error handling.
+> 2. Create a helper in src/utils/text.ts:
+>    - Export a pure helper `stripHtml(html: string): string` to safely strip HTML tags from the TVMaze summary string without using dangerous innerHTML injection, or safely clean it up for rendering.
+> 3. Build the full ShowDetailPage component in src/pages/ShowDetailPage.tsx:
+>    - Extract the show id from URL using `useParams<{ id: string }>()`.
+>    - Manage `show: Show | null`, `isLoading: boolean`, and `error: string | null` states.
+>    - Fetch the single show details on component mount or id change inside `useEffect`.
+>    - Render a loading spinner during fetch and an informative error state with a "Back to Catalog" button if fetch fails or show is not found.
+>    - Render detailed show data: large poster image (with fallback placeholder), title, rating, genres badge list, status, premiered year, runtime, and sanitized summary description.
+>    - Include a "Back to Catalog" navigation button linking back to "/".
+>    - Include an external link to the official TVMaze page (`show.url`) opening in a new tab with `rel="noreferrer noopener"`.
+> 4. Add clean, responsive layout styles in src/pages/ShowDetailPage.css or modular CSS.
+> 5. Strict TypeScript compliance (zero 'any'). Ensure `npm run build` passes cleanly.
+> 6. Update tasks.md to mark Task 6 as completed ([x]).
