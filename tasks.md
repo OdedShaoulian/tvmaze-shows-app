@@ -16,7 +16,7 @@
   - Replace mock data fetching in `ShowsPage` with an actual `fetch` to `https://api.tvmaze.com/shows` inside `useEffect`. Handle loading spinner and error alert.
   - *Done when:* Shows load live from TVMaze API, showing a loading indicator during fetch and an error banner on network failure.
 
-- [ ] **Task 5: Search & Genre Filtering**
+- [x] **Task 5: Search & Genre Filtering**
   - Implement pure filtering functions in `src/utils/filters.ts` and a `FilterBar` component. Connect inputs to state in `ShowsPage`.
   - *Done when:* Typing a show name or choosing a genre filters the cards instantly.
 

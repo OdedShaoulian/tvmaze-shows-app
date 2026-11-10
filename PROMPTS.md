@@ -67,3 +67,23 @@
 > 4. Add clear, modern CSS styling for the show card and responsive grid in src/components/ShowCard.css or modular CSS.
 > 5. Zero use of 'any'. Ensure TypeScript compiles cleanly.
 > 6. Update tasks.md to mark Task 3 as completed ([x]).
+
+**15:21 · antigravity**
+
+> We are continuing the TVMaze Series Explorer implementation based on PRD.md and tasks.md.
+> 
+> Please execute Task 4: API Integration with Loading & Error States.
+> 
+> Requirements:
+> 1. Create an API service file in src/services/tvmazeApi.ts:
+>    - Export a function `fetchShows(): Promise<Show[]>` that fetches data from `https://api.tvmaze.com/shows`.
+>    - Add proper HTTP error handling (check response.ok, throw informative error on failures).
+> 2. Update src/pages/ShowsPage.tsx:
+>    - Replace the static mock data import with stateful data management using `useState<Show[]>([])`.
+>    - Add loading state (`isLoading: boolean`, initialized to true) and error state (`error: string | null`, initialized to null).
+>    - Fetch the live shows inside a `useEffect` hook on mount.
+>    - Render an accessible, clean loading spinner/message when `isLoading` is true.
+>    - Render an error banner with a "Retry" button when `error` is present.
+>    - When loaded successfully, render the shows in the existing responsive ShowCard grid.
+> 3. Strictly maintain type safety (no 'any'). Ensure `npm run build` succeeds cleanly.
+> 4. Update tasks.md to mark Task 4 as completed ([x]).
