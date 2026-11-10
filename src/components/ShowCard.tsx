@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import type { Show } from '../types/show'
 import './ShowCard.css'
@@ -7,22 +8,25 @@ export interface ShowCardProps {
 }
 
 export function ShowCard({ show }: ShowCardProps) {
+  const [imageError, setImageError] = useState(false)
   const premierYear = show.premiered ? show.premiered.slice(0, 4) : 'N/A'
   const ratingValue = show.rating.average !== null ? show.rating.average.toFixed(1) : 'N/A'
+  const hasValidPoster = Boolean(show.image?.medium) && !imageError
 
   return (
     <article className="show-card">
       <Link to={`/shows/${show.id}`} className="show-card-link">
         <div className="show-card-poster">
-          {show.image ? (
+          {hasValidPoster && show.image ? (
             <img
               src={show.image.medium}
-              alt={`${show.name} poster`}
+              alt={`${show.name} official poster`}
               loading="lazy"
+              onError={() => setImageError(true)}
             />
           ) : (
             <div className="show-card-placeholder" role="img" aria-label={`${show.name} no poster available`}>
-              <span>No Image</span>
+              <span>No Poster Available</span>
             </div>
           )}
           <span className="show-card-rating" title="Average rating">
@@ -52,4 +56,3 @@ export function ShowCard({ show }: ShowCardProps) {
     </article>
   )
 }
-

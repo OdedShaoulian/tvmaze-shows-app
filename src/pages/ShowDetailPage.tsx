@@ -10,6 +10,7 @@ export function ShowDetailPage() {
   const [show, setShow] = useState<Show | null>(null)
   const [isLoading, setIsLoading] = useState<boolean>(true)
   const [error, setError] = useState<string | null>(null)
+  const [posterError, setPosterError] = useState<boolean>(false)
 
   const loadShow = useCallback(async () => {
     if (!id) {
@@ -20,6 +21,7 @@ export function ShowDetailPage() {
 
     setIsLoading(true)
     setError(null)
+    setPosterError(false)
     try {
       const data = await fetchShowById(id)
       setShow(data)
@@ -93,10 +95,11 @@ export function ShowDetailPage() {
 
       <div className="show-detail-card">
         <div className="show-detail-poster">
-          {show.image ? (
+          {show.image && !posterError ? (
             <img
               src={show.image.original || show.image.medium}
-              alt={`${show.name} poster`}
+              alt={`${show.name} official poster`}
+              onError={() => setPosterError(true)}
             />
           ) : (
             <div

@@ -41,8 +41,13 @@
   text-decoration: none;
   color: var(--text);
   font-weight: 500;
-  padding: 6px 14px;
-  border-radius: 6px;
+  padding: 8px 16px;
+  min-height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border-radius: 8px;
   transition: color 0.2s, background-color 0.2s;
 }
 
@@ -148,9 +153,22 @@
 @media (max-width: 600px) {
   .navbar-container {
     padding: 12px 16px;
+    justify-content: center;
+  }
+
+  .navbar-links {
+    width: 100%;
+    justify-content: space-around;
+    gap: 6px;
+  }
+
+  .nav-link {
+    flex: 1;
+    padding: 8px 10px;
+    font-size: 15px;
   }
 
   .main-content {
-    padding: 16px;
+    padding: 16px 12px;
   }
 }

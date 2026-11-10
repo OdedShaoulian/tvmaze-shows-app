@@ -205,3 +205,23 @@
 > 3. Ensure at least 6-8 independent, descriptive, and passing unit tests across these suites.
 > 4. Run tests and verify that `npm test` passes cleanly with 100% green tests.
 > 5. Update tasks.md to mark Task 9 as completed ([x]).
+
+**17:52 · antigravity**
+
+> We are continuing the TVMaze Series Explorer implementation based on PRD.md and tasks.md.
+> 
+> Please execute Task 10: Responsive Styling & Polish.
+> 
+> Requirements:
+> 1. Polish responsive design across all viewports (desktop, tablet, and mobile down to 360px width):
+>    - Navbar: responsive collapse / clean mobile wrapping and accessible tap targets.
+>    - Shows Catalog: grid scaling cleanly (auto-fit minmax(220px, 1fr)) without horizontal overflow on mobile.
+>    - FilterBar: flex wrapping nicely on smaller screens with full-width inputs on mobile.
+>    - Show Detail Page: clean column stack on mobile (poster on top, meta-details and summary below).
+>    - Compare Page: side-by-side on wide screens, stacked comparative cards on mobile.
+>    - Stats Page: responsive metric grid cards and readable tables/charts.
+> 2. Visual enhancements:
+>    - Consistent typography, subtle card box-shadows, smooth hover lift transitions, and distinct status badge colors (e.g. green for "Running", slate/purple for "Ended").
+>    - Meaningful alt attributes and poster image fallbacks so broken images never break card layouts.
+> 3. Verify that `npm run build` and `npm test` continue to pass with zero errors.
+> 4. Update tasks.md to mark Task 10 as completed ([x]).

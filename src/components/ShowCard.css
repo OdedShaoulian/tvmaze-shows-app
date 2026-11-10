@@ -1,6 +1,6 @@
 .shows-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 24px;
   margin-top: 24px;
 }
@@ -10,13 +10,14 @@
   border: 1px solid var(--border);
   border-radius: 12px;
   overflow: hidden;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
   display: flex;
   flex-direction: column;
 }
 
 .show-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-5px);
   box-shadow: var(--shadow);
   border-color: var(--accent-border);
 }
@@ -41,6 +42,11 @@
   height: 100%;
   object-fit: cover;
   display: block;
+  transition: transform 0.3s ease;
+}
+
+.show-card:hover .show-card-poster img {
+  transform: scale(1.03);
 }
 
 .show-card-placeholder {
@@ -52,6 +58,9 @@
   color: var(--text);
   font-size: 14px;
   font-weight: 500;
+  padding: 12px;
+  box-sizing: border-box;
+  text-align: center;
 }
 
 .show-card-rating {
@@ -92,22 +101,29 @@
 }
 
 .show-card-status {
-  padding: 2px 8px;
+  display: inline-block;
+  padding: 3px 10px;
   border-radius: 999px;
   font-size: 12px;
-  font-weight: 500;
+  font-weight: 600;
   background: var(--social-bg);
   color: var(--text-h);
 }
 
 .show-card-status.status-running {
-  background: rgba(34, 197, 94, 0.15);
+  background: rgba(34, 197, 94, 0.16);
   color: #16a34a;
 }
 
 .show-card-status.status-ended {
   background: var(--accent-bg);
   color: var(--accent);
+}
+
+.show-card-status.status-to-be-determined,
+.show-card-status.status-in-development {
+  background: rgba(245, 158, 11, 0.16);
+  color: #d97706;
 }
 
 .show-card-genres {
@@ -126,3 +142,9 @@
   color: var(--text);
 }
 
+@media (max-width: 480px) {
+  .shows-grid {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 16px;
+  }
+}

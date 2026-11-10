@@ -36,7 +36,7 @@
   - Implement at least 5 unit tests in `src/utils/__tests__/` covering filtering, sorting, rating calculation, and data aggregation.
   - *Done when:* Running `npm test` executes and passes all unit tests cleanly.
 
-- [ ] **Task 10: Responsive Styling & Polish**
+- [x] **Task 10: Responsive Styling & Polish**
   - Apply custom responsive CSS styling for mobile and desktop viewports, add status badges, and refine typography.
   - *Done when:* The UI scales cleanly down to mobile width (375px) without console errors.
 
