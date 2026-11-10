@@ -24,7 +24,7 @@
   - Build `ShowDetailPage` utilizing `useParams` to extract the show ID and fetching single show data from `https://api.tvmaze.com/shows/:id`.
   - *Done when:* Clicking any card routes to `/shows/:id` and renders full metadata and summary.
 
-- [ ] **Task 7: Show Comparison Page**
+- [x] **Task 7: Show Comparison Page**
   - Implement `ComparePage` with selectors for two shows and comparison logic in `src/utils/compare.ts`.
   - *Done when:* Selecting two shows renders a comparison table of their attributes.
 
