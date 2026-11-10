@@ -242,3 +242,23 @@
 >    - Testing Overview: mention the Vitest suite covering pure utilities (filters, stats, compare).
 > 2. Ensure tasks.md has all tasks marked as completed ([x]).
 > 3. Run and verify that both `npm run build` and `npm test` pass with zero errors.
+
+**18:30 · antigravity**
+
+> We want to upgrade the UI/UX styling of the TVMaze Series Explorer to a premium "Cinema Streaming Dark" aesthetic (inspired by Apple TV+ and HBO Max), while strictly maintaining all existing functionality, TypeScript types, and 100% test compatibility.
+> 
+> Requirements:
+> 1. Palette & Atmosphere:
+>    - Deep cinematic dark theme: Background `#090D16` / `#0D111D`, container & card backgrounds `#151C2C` with subtle border `#222D42`.
+>    - Text hierarchy: High-contrast headings `#F8FAFC`, readable secondary text `#94A3B8`, muted `#64748B`.
+>    - Accent colors: Electric Indigo / Violet gradient accents (`linear-gradient(135deg, #6366F1, #8B5CF6)`), glowing gold `#F59E0B` for star ratings, vivid emerald `#10B981` for 'Running' status badges.
+> 2. Component Refinements:
+>    - Navbar: Sticky frosted-glass header with `backdrop-filter: blur(16px)`, translucent background `rgba(13, 17, 29, 0.85)`, and a sleek glowing active indicator under the current route link.
+>    - FilterBar: Sleek dark inputs with subtle hover/focus rings, refined pill dropdowns, and clean responsive flex wrapping.
+>    - ShowCard: Deep card styling, image aspect-ratio preservation, smooth hover animation with vertical lift, and subtle ambient glowing drop-shadow.
+>    - ShowDetailPage: Cinematic backdrop layout, prominent typography, clean metadata badges, and stylized CTA buttons.
+>    - ComparePage & StatsPage: Dark elevated cards for KPI stats, glowing progress bars, and clean side-by-side comparison tables.
+> 3. Strict Constraints:
+>    - DO NOT alter any function signatures, interface definitions, or data models.
+>    - Keep pure CSS / modular styling changes only.
+>    - Verify that all 13 Vitest unit tests pass and npm run build succeeds cleanly.
