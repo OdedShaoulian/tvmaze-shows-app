@@ -28,7 +28,7 @@
   - Implement `ComparePage` with selectors for two shows and comparison logic in `src/utils/compare.ts`.
   - *Done when:* Selecting two shows renders a comparison table of their attributes.
 
-- [ ] **Task 8: Catalog Analytics & Stats Page**
+- [x] **Task 8: Catalog Analytics & Stats Page**
   - Build pure aggregation functions in `src/utils/stats.ts` and build `StatsPage` to display average rating, top 5 shows, and status breakdown.
   - *Done when:* The `/stats` page accurately computes and renders summary insights from the loaded shows.
 

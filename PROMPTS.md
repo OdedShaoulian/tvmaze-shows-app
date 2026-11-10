@@ -139,3 +139,53 @@
 > 4. Add clean, responsive layout styles in src/pages/ShowDetailPage.css or modular CSS.
 > 5. Strict TypeScript compliance (zero 'any'). Ensure `npm run build` passes cleanly.
 > 6. Update tasks.md to mark Task 6 as completed ([x]).
+
+**16:46 · antigravity**
+
+> We are continuing the TVMaze Series Explorer implementation based on PRD.md and tasks.md.
+> 
+> Please execute Task 7: Show Comparison Page.
+> 
+> Requirements:
+> 1. Create a pure comparison utility in src/utils/compare.ts:
+>    - Export helper functions to compare attributes between two shows:
+>      * `compareRatings(a: Show, b: Show): { winner: 'A' | 'B' | 'tie'; diff: number }`
+>      * `compareRuntime(a: Show, b: Show): { longer: 'A' | 'B' | 'tie'; diff: number }`
+>      * `getSharedGenres(a: Show, b: Show): string[]`
+>    - Keep all functions pure, deterministic, and typed (suitable for Vitest unit testing).
+> 2. Update src/pages/ComparePage.tsx:
+>    - Load the list of available shows (via fetchShows from tvmazeApi if not loaded, with loading/error handling).
+>    - Render two select dropdowns allowing the user to select "Show A" and "Show B".
+>    - When both shows are chosen, render a side-by-side comparison table/card view showing:
+>      * Posters, Titles, and Premier dates.
+>      * Rating with visual highlight for the higher-rated show.
+>      * Runtime with indicator for the longer show.
+>      * Overlapping / shared genres badges.
+>      * Status badges.
+>    - Display an instructional prompt when fewer than two shows are selected.
+> 3. Add responsive styling in src/pages/ComparePage.css or modular CSS.
+> 4. Strict TypeScript typing (zero 'any'). Ensure `npm run build` passes with 0 errors.
+> 5. Update tasks.md to mark Task 7 as completed ([x]).
+
+**17:06 · antigravity**
+
+> We are continuing the TVMaze Series Explorer implementation based on PRD.md and tasks.md.
+> 
+> Please execute Task 8: Catalog Analytics & Stats Page.
+> 
+> Requirements:
+> 1. Create a pure analytics utility in src/utils/stats.ts:
+>    - Export pure functions to compute metrics from a Show[] catalog:
+>      * `calculateAverageRating(shows: Show[]): number` (rounded to 2 decimal places, ignoring shows with null rating).
+>      * `getStatusDistribution(shows: Show[]): Record<string, number>` (counts of shows per status e.g. "Running", "Ended").
+>      * `getTopRatedShows(shows: Show[], limit?: number): Show[]` (returns sorted top N shows by rating descending).
+>      * `getGenreDistribution(shows: Show[]): Record<string, number>` (frequency of each genre across the catalog).
+>    - Ensure all functions handle edge cases (empty array, null ratings) gracefully and purely without side effects.
+> 2. Build src/pages/StatsPage.tsx:
+>    - Fetch shows catalog using `fetchShows` from tvmazeApi if not already in state/context, with proper loading spinner and error handling.
+>    - Display key metric summary cards: Total Shows, Average Rating, and Most Common Status.
+>    - Display a "Top 5 Highest Rated Shows" leaderboard table/list with rank, title, genres, and rating badges.
+>    - Display a breakdown of shows by status with progress/percentage indicators.
+> 3. Add responsive styling in src/pages/StatsPage.css or modular CSS.
+> 4. Strict TypeScript typing (zero 'any'). Ensure `npm run build` succeeds cleanly.
+> 5. Update tasks.md to mark Task 8 as completed ([x]).
