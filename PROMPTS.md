@@ -22,3 +22,48 @@
 >    - ShowComparison: showA (Show | null), showB (Show | null)
 > 3. Strictly NO use of 'any' across all definitions. Export all interfaces and types.
 > 4. Update tasks.md to mark Task 1 as completed ([x]).
+
+**14:40 · antigravity**
+
+> We are continuing the TVMaze Series Explorer implementation based on PRD.md and tasks.md.
+> 
+> Please execute Task 2: App Layout & React Router Setup.
+> 
+> Requirements:
+> 1. Setup React Router in src/App.tsx using BrowserRouter, Routes, and Route.
+> 2. Define the application routes:
+>    - "/" -> ShowsPage (Master catalog view)
+>    - "/shows/:id" -> ShowDetailPage (Show details view)
+>    - "/compare" -> ComparePage (Show comparison view)
+>    - "/stats" -> StatsPage (Analytics & stats view)
+>    - "*" -> NotFoundPage (404 view with link back to home)
+> 3. Create lightweight placeholder page components in src/pages/:
+>    - ShowsPage.tsx
+>    - ShowDetailPage.tsx
+>    - ComparePage.tsx
+>    - StatsPage.tsx
+>    - NotFoundPage.tsx
+> 4. Create a responsive Navbar component in src/components/Navbar.tsx using NavLink from react-router-dom, providing active link styling and links to Home ("/"), Compare ("/compare"), and Stats ("/stats").
+> 5. Create an AppLayout component or wrap routes cleanly with the Navbar and a responsive main container.
+> 6. Zero 'any' types used.
+> 7. Update tasks.md to mark Task 2 as completed ([x]).
+
+**14:56 · antigravity**
+
+> We are continuing the TVMaze Series Explorer implementation based on PRD.md and tasks.md.
+> 
+> Please execute Task 3: Mock Data & Master List Component.
+> 
+> Requirements:
+> 1. Create a mock dataset in src/data/mockShows.json containing at least 4 realistic TV shows adhering to the Show interface (including fields: id, name, summary, premiered, status, runtime, rating with average, image with medium and original, genres, url).
+> 2. Create a reusable ShowCard component in src/components/ShowCard.tsx:
+>    - Accept a show: Show as prop.
+>    - Render the show poster image (with an accessible alt attribute and a fallback placeholder if null), show name, rating badge, status, and premier year.
+>    - Include a React Router Link pointing to `/shows/${show.id}`.
+> 3. Update src/pages/ShowsPage.tsx:
+>    - Import the mock shows from mockShows.json.
+>    - Render a responsive grid of ShowCard components.
+>    - Ensure every card in the list uses a unique key prop (show.id).
+> 4. Add clear, modern CSS styling for the show card and responsive grid in src/components/ShowCard.css or modular CSS.
+> 5. Zero use of 'any'. Ensure TypeScript compiles cleanly.
+> 6. Update tasks.md to mark Task 3 as completed ([x]).

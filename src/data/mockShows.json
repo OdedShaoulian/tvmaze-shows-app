@@ -1,0 +1,88 @@
+[
+  {
+    "id": 1,
+    "name": "Under the Dome",
+    "summary": "<p><b>Under the Dome</b> is the story of a small town that is suddenly and inexplicably sealed off from the rest of the world by an enormous transparent dome.</p>",
+    "premiered": "2013-06-24",
+    "status": "Ended",
+    "runtime": 60,
+    "rating": {
+      "average": 6.5
+    },
+    "image": {
+      "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/81/202627.jpg",
+      "original": "https://static.tvmaze.com/uploads/images/original_untouched/81/202627.jpg"
+    },
+    "genres": ["Drama", "Science-Fiction", "Thriller"],
+    "url": "https://www.tvmaze.com/shows/1/under-the-dome"
+  },
+  {
+    "id": 2,
+    "name": "Person of Interest",
+    "summary": "<p>You are being watched. The government has a secret system, a machine that spies on you every hour of every day.</p>",
+    "premiered": "2011-09-22",
+    "status": "Ended",
+    "runtime": 60,
+    "rating": {
+      "average": 8.8
+    },
+    "image": {
+      "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/163/407679.jpg",
+      "original": "https://static.tvmaze.com/uploads/images/original_untouched/163/407679.jpg"
+    },
+    "genres": ["Action", "Crime", "Science-Fiction"],
+    "url": "https://www.tvmaze.com/shows/2/person-of-interest"
+  },
+  {
+    "id": 169,
+    "name": "Breaking Bad",
+    "summary": "<p><b>Breaking Bad</b> follows protagonist Walter White, a chemistry teacher who lives in New Mexico with his wife and teenage son who has cerebral palsy.</p>",
+    "premiered": "2008-01-20",
+    "status": "Ended",
+    "runtime": 60,
+    "rating": {
+      "average": 9.2
+    },
+    "image": {
+      "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/501/1253519.jpg",
+      "original": "https://static.tvmaze.com/uploads/images/original_untouched/501/1253519.jpg"
+    },
+    "genres": ["Drama", "Crime", "Thriller"],
+    "url": "https://www.tvmaze.com/shows/169/breaking-bad"
+  },
+  {
+    "id": 82,
+    "name": "Game of Thrones",
+    "summary": "<p>Based on the bestselling book series <i>A Song of Ice and Fire</i> by George R.R. Martin, this sprawling new HBO drama is set in a world where summers span decades and winters can last a lifetime.</p>",
+    "premiered": "2011-04-17",
+    "status": "Ended",
+    "runtime": 60,
+    "rating": {
+      "average": 8.9
+    },
+    "image": {
+      "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/498/1245274.jpg",
+      "original": "https://static.tvmaze.com/uploads/images/original_untouched/498/1245274.jpg"
+    },
+    "genres": ["Drama", "Adventure", "Fantasy"],
+    "url": "https://www.tvmaze.com/shows/82/game-of-thrones"
+  },
+  {
+    "id": 2993,
+    "name": "Stranger Things",
+    "summary": "<p>A love letter to the '80s classics that captivated a generation, <b>Stranger Things</b> is set in 1983 Indiana, where a young boy vanishes into thin air.</p>",
+    "premiered": "2016-07-15",
+    "status": "Running",
+    "runtime": 60,
+    "rating": {
+      "average": 8.5
+    },
+    "image": {
+      "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/482/1205692.jpg",
+      "original": "https://static.tvmaze.com/uploads/images/original_untouched/482/1205692.jpg"
+    },
+    "genres": ["Drama", "Fantasy", "Science-Fiction"],
+    "url": "https://www.tvmaze.com/shows/2993/stranger-things"
+  }
+]
+

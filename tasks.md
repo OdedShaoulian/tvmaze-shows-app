@@ -8,7 +8,7 @@
   - Configure `BrowserRouter`, define routes (`/`, `/shows/:id`, `/compare`, `/stats`, `*`), and implement a responsive `Navbar` component using `NavLink`.
   - *Done when:* Clicking navigation links changes the URL and renders dedicated placeholder page views.
 
-- [ ] **Task 3: Mock Data & Master List Component**
+- [x] **Task 3: Mock Data & Master List Component**
   - Create `src/data/mockShows.json` with 4 sample shows. Build `ShowsPage` and `ShowCard` rendering the list with unique `key` props.
   - *Done when:* Mock shows display correctly on the home view as responsive cards.
 
