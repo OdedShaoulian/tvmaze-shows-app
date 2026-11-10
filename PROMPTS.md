@@ -262,3 +262,37 @@
 >    - DO NOT alter any function signatures, interface definitions, or data models.
 >    - Keep pure CSS / modular styling changes only.
 >    - Verify that all 13 Vitest unit tests pass and npm run build succeeds cleanly.
+
+**18:52 · antigravity**
+
+> Fix the header clipping bug and upgrade the entire design to an authentic, ultra-clean Apple TV+ aesthetic.
+> 
+> 1. Fix the Header Clipping Bug across ALL pages:
+>    - In all page titles (Shows Catalog, Compare Shows, Catalog Stats, etc.), remove broken text-clipping/gradient-masking or ensure proper line-height: 1.25, adequate padding-bottom: 4px, and overflow: visible so descender letters ('g', 'p', 'y') are never chopped off.
+> 
+> 2. Upgrade to Apple TV+ / Human Interface Guidelines (Clean, Minimalist, Premium):
+>    - Typography & Base: Use Apple system font stack (-apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, sans-serif), pure black #000000 background, translucent surfaces rgba(255, 255, 255, 0.04), and subtle borders.
+>    - Cards & Interactions: Clean aspect ratio, scale transition on hover, frosted glass rating badges, translucent tags without neon glows.
+>    - FilterBar & Navigation: Frosted glass bar, subtle pill inputs and dropdowns.
+> 
+> 3. Verification: Ensure npm run build and npm test continue to pass with 0 errors.
+
+**19:02 · antigravity**
+
+> Upgrade the application styling with Apple-style "Liquid Gloss" buttons, rich Apple system colors, and a polished sticky frosted-glass navigation bar. Strictly maintain all TypeScript types, functions, and 100% passing tests.
+> 
+> 1. Sticky Glass Navbar & Spacing Fix:
+>    - Ensure the Navbar is firmly sticky at the top of the viewport (position: sticky; top: 0; z-index: 1000; width: 100%).
+>    - Apply authentic Apple frosted glass: background rgba(15, 15, 18, 0.72), backdrop-filter blur(20px), and subtle bottom border.
+>    - Balance vertical spacing between the sticky navbar and page headers.
+> 
+> 2. Apple "Liquid Gloss" Buttons & Tabs:
+>    - Upgrade buttons, inputs, and active nav links with glossy sheens, specular top highlights (inset 0 1px 0), and smooth hover states.
+>    - Primary buttons in Apple System Blue gradient.
+> 
+> 3. Inject Vibrant Apple System Colors:
+>    - Ratings in warm gold (#FF9F0A / #FFB800) with subtle glow.
+>    - Status breakdown bars in iOS gradient (#0A84FF to #5E5CE6).
+>    - Badges: mint green for Running, slate-purple for Ended.
+> 
+> 4. Verification: Ensure npm run build and npm test execute with 0 errors.
