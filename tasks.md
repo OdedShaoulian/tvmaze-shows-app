@@ -40,6 +40,6 @@
   - Apply custom responsive CSS styling for mobile and desktop viewports, add status badges, and refine typography.
   - *Done when:* The UI scales cleanly down to mobile width (375px) without console errors.
 
-- [ ] **Task 11: Documentation & Final Verification**
+- [x] **Task 11: Documentation & Final Verification**
   - Update `README.md` with project description, API reference, run instructions, and ensure `npm run build` passes with 0 errors.
   - *Done when:* `npm run build` and `npm test` both succeed and repository documents are complete.

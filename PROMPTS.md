@@ -225,3 +225,20 @@
 >    - Meaningful alt attributes and poster image fallbacks so broken images never break card layouts.
 > 3. Verify that `npm run build` and `npm test` continue to pass with zero errors.
 > 4. Update tasks.md to mark Task 10 as completed ([x]).
+
+**18:08 · antigravity**
+
+> We are finalizing the TVMaze Series Explorer implementation based on PRD.md and tasks.md.
+> 
+> Please execute Task 11: Documentation & Final Verification.
+> 
+> Requirements:
+> 1. Update README.md with comprehensive, clean documentation:
+>    - Project Title & Overview: TVMaze Series Explorer SPA built with React 19, TypeScript, and Vite.
+>    - Core Features List: Live TVMaze API integration, real-time search & genre/status filtering, dynamic show detail pages, side-by-side show comparator, and catalog analytics/stats dashboard.
+>    - Tech Stack: React 19, TypeScript, Vite, React Router v6+, Vitest.
+>    - Architecture & Directory Structure: brief overview of src/ components, pages, services, types, and utils.
+>    - Getting Started Guide: exact commands for cloning, installing dependencies (`npm install`), starting development server (`npm run dev`), running unit test suites (`npm test`), and generating production build (`npm run build`).
+>    - Testing Overview: mention the Vitest suite covering pure utilities (filters, stats, compare).
+> 2. Ensure tasks.md has all tasks marked as completed ([x]).
+> 3. Run and verify that both `npm run build` and `npm test` pass with zero errors.
