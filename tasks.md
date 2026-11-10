@@ -4,7 +4,7 @@
   - Define complete TypeScript types and interfaces in `src/types/show.ts` (Show, Rating, Image, FilterState) with zero `any`.
   - *Done when:* `src/types/show.ts` exports all required interfaces and `npm run build` succeeds.
 
-- [ ] **Task 2: App Layout & React Router Setup**
+- [x] **Task 2: App Layout & React Router Setup**
   - Configure `BrowserRouter`, define routes (`/`, `/shows/:id`, `/compare`, `/stats`, `*`), and implement a responsive `Navbar` component using `NavLink`.
   - *Done when:* Clicking navigation links changes the URL and renders dedicated placeholder page views.
 
